@@ -13,7 +13,7 @@ Summary
 -----------------------
 
 <ul>
-<li><a href="#History">History</a></li>
+<li><a href="#history">History</a></li>
 <li><a href="#the-bases">The bases</a></li>
 <li><a href="#the-work-space">The Work Space</a></li>
 <li><a href="#functionalities">Functionalities</a></li>
