@@ -76,7 +76,7 @@ Compatibility
 
 Since <a href="https://wordpress.org/download/" target="_blanc">Wordpress 4.4</a> & <a href="http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226" target="_blanc">Avada 3.9.1</a>
 
-Viasocial startup release is simple & flexible & compatible with popular CMS :<br>
+PrestigeSEO startup release is simple & flexible & compatible with popular CMS :<br>
 <a href="http://drupalfr.org/" target="_blanc"><img src="http://viaprestige.github.io/Viasocial/img/viasocial_drupal.png" alt="Drupal" style="max-width:100%;"></a> | <a href="https://www.joomla.org/" target="_blanc"><img src="http://viaprestige.github.io/Viasocial/img/viasocial_joomla.png" alt="Joomla!" style="max-width:100%;"></a> | <a href="https://www.prestashop.com/fr/" target="_blanc"><img src="http://viaprestige.github.io/Viasocial/img/viasocial_prestashop.png" alt="Prestashop" style="max-width:100%;"></a> | <a href="http://magento.com/" target="_blanc"><img src="http://viaprestige.github.io/Viasocial/img/viasocial_magento.png" alt="Magento" style="max-width:100%;"></a> | <a href="http://modx.com/" target="_blanc"><img src="http://viaprestige.github.io/Viasocial/img/viasocial_modx.png" alt="Modx" style="max-width:100%;"></a><br>
 Depending on your customization.
 
@@ -126,13 +126,23 @@ Installation
 
 2- Copy Folder PrestigeSEO in package
 
-2- Include the facebook class in your Avada footer.php and make a call to it  :
+2- Include the Main class in your Avada footer.php and make a call to it  :
 
 	include_once(get_template_directory().'/package/PrestigeSEO/PrestigeSEO.class.php');
 	
 3- Create instance :
 
 	PrestigeSEO\PrestigeSEO::PSEO_run();
+
+----------
+
+Or for more simple add this line to your functions.php :
+
+	add_action('wp_footer','prestigeSEO');
+	function prestigeSEO(){
+	include_once(get_template_directory().'/packages/PrestigeSEO/PrestigeSEO.class.php');
+	PrestigeSEO\PrestigeSEO::PSEO_run();
+	}
 
 ----------
 
